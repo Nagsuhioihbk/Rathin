@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const path = require('path');
 require('dotenv').config();
-import history from "connect-history-api-fallback";
+const history = require( 'connect-history-api-fallback');
 
 const app = express();
 
