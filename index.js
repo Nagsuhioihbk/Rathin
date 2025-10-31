@@ -12,6 +12,7 @@ const authRoutes = require('./routes/auth');
 const serviceRequestRoutes = require('./routes/serviceRequests');
 const notificationRoutes = require('./routes/notifications');
 const uploadRoutes = require('./routes/upload');
+const signatureRoutes = require('./routes/signature-routes');
 
 // Middleware
 app.use(cors());
@@ -37,6 +38,8 @@ app.use('/api/auth', authRoutes);
 app.use('/api/service-requests', serviceRequestRoutes);
 app.use('/api/notifications', notificationRoutes);
 app.use('/api/upload', uploadRoutes); 
+
+app.use('/api', signatureRoutes);
 
 // Health check
 app.get('/health', (req, res) => {

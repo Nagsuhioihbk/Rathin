@@ -64,6 +64,18 @@ const serviceReportSchema = new mongoose.Schema({
     path: String,
     mimetype: String
   }],
+  beforeServiceImages: [{
+    filename: String,
+    path: String,
+    mimetype: String,
+    type: { type: String, default: 'before' }
+  }],
+  afterServiceImages: [{
+    filename: String,
+    path: String,
+    mimetype: String,
+    type: { type: String, default: 'after' }
+  }],
   
   // PDF File Path - ADDED THIS
   filePath: { type: String },
